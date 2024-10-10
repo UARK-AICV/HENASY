@@ -211,15 +211,18 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
-            <p>
-              Precise 3D environmental mapping is pivotal in robotics. Existing methods often rely on predefined concepts during training or are time-intensive when generating semantic maps.
-              This paper presents Open-Fusion, a groundbreaking approach for real-time open-vocabulary 3D mapping and queryable scene representation using RGB-D data.
-              Open-Fusion harnesses the power of a pre-trained vision-language foundation model (VLFM) for open-set semantic comprehension and employs the Truncated Signed Distance Function (TSDF) for swift 3D scene reconstruction.
-              By leveraging the VLFM, we extract region-based embeddings and their associated confidence maps.
-              These are then integrated with 3D knowledge from TSDF using an enhanced Hungarian-based feature-matching mechanism.
-              Notably, Open-Fusion delivers outstanding annotation-free 3D segmentation for open-vocabulary without necessitating additional 3D training.
-              Benchmark tests on the ScanNet dataset against leading zero-shot methods highlight Open-Fusion's superiority.
-              Furthermore, it seamlessly combines the strengths of region-based VLFM and TSDF, facilitating real-time 3D scene comprehension that includes object concepts and open-world semantics.
+            <p>Current video-language models (VLMs) rely extensively on instance-level alignment between video and language modalities,
+				which presents two major limitations: (1) visual reasoning disobeys the natural perception that humans do in first-person perspective, leading to a lack of reasoning interpretation; and (2) learning is limited in capturing inherent fine-grained relationships between two modalities.
+            </p>
+			<p>
+			In this paper, we take an inspiration from human perception and explore a compositional approach for egocentric video representation.
+			We introduce \textit{HENASY (Hierarchical ENtities ASsemblY)}, which includes a spatiotemporal token grouping mechanism to explicitly assemble dynamically evolving scene entities through time and model their relationship for video representation.
+			By leveraging compositional structure understanding, HENASY possesses strong interpretability via visual grounding with free-form text queries.
+			We further explore a suite of multi-grained contrastive losses to facilitate entity-centric understandings.
+			This comprises three alignment types: video-narration, noun-entity, verb-entities alignments.
+			</p>
+            <p> Our method demonstrates strong interpretability in both quantitative and qualitative experiments;
+			while maintaining competitive performances on five downstream tasks via zero-shot transfer or as video/text representation, including video/text retrieval, action recognition, multi-choice query, natural language query, and moments query.
             </p>
           </div>
         </div>
