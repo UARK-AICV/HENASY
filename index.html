@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Open-Fusion: Real-time Open-Vocabulary 3D Mapping and Queryable Scene Representation">
+  <meta name="keywords"
+    content="egocentric,video understanding,vision language models">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HENASY: Learning to Assemble Scene-Entities for Egocentric Video-Language Model</title>
+
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B5BEN25S50"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-B5BEN25S50');
+  </script>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+  <script src="./static/js/vis.js"></script>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto auto auto auto;
+      gap: 10px;
+      padding: 0;
+    }
+
+    .grid-container > div {
+      text-align: center;
+      padding: 0;
+      font-size: 30px;
+    }
+
+    .item1 {
+      grid-column: 1 / 4;
+    }
+    .item2 {
+      grid-column: 4 / 7;
+    }
+    .item3 {
+      grid-column: 1 / 3;
+    }
+    .item4 {
+      grid-column: 3 / 5;
+    }
+    .item5 {
+      grid-column: 5 / 7;
+    }
+
+    .content h4 {
+      font-size: 16px; !important;
+      padding: 0;
+      margin: 0; !important;
+    }
+
+    hr {
+      background-color: lightgray;!important;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-2 publication-title">Open-Fusion: Real-time Open-Vocabulary 3D Mapping and Queryable Scene Representation</h1>
+            <h2 class="title is-6 publlication-title">ICRA 2024 Oral</h2>
+            <div class="is-size-6 publication-authors">
+              <span class="author-block">
+                <a href="https://kashu7100.github.io/">Kashu Yamazaki</a> <sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://uark-aicv.github.io/team/taisei_hanyu">Taisei Hanyu</a> <sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://vhvkhoa.github.io/">Khoa Vo</a> <sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://phamtrongthang123.github.io/">Thang Pham</a> <sup>1</sup>,
+              </span>
+              <br>
+              <span class="author-block">
+                <a href="">Minh Tran</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://directory.statler.wvu.edu/faculty-staff-directory/gianfranco-doretto">Gianfranco Doretto</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a
+                  href="https://www.csc.liv.ac.uk/~anguyen/">Anh Nguyen</a><sup>3</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.nganle.net/">Ngan Le</a><sup>1</sup>,
+              </span>
+            </div>
+
+            <div class="is-size-6 publication-authors">
+              <span class="author-block"><sup>1</sup>University of Arkansas,</span>
+              <span class="author-block"><sup>2</sup>West Virginia University,</span>
+              <span class="author-block"><sup>3</sup>University of Liverpool</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2310.03923.pdf" class="external-link button is-normal ">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2310.03923" class="external-link button is-normal ">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://github.com/UARK-AICV/OpenFusion" class="external-link button is-normal ">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video id="teaser" autoplay muted loop playsinline height="100%">
+          <source src="./static/videos/kobuki_crop.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          <span class="coolname">Open-Fusion</span> builds open-vocabulary 3D queryable scene that bridges the 3D perception and language models for robotics in <b>real-time</b>.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <video poster="" id="icl_kt0" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/icl_kt0.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="icl_kt1" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/icl_kt1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="icl_kt2" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/icl_kt2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item">
+            <video poster="" id="icl_kt3" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/icl_kt3.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Precise 3D environmental mapping is pivotal in robotics. Existing methods often rely on predefined concepts during training or are time-intensive when generating semantic maps.
+              This paper presents Open-Fusion, a groundbreaking approach for real-time open-vocabulary 3D mapping and queryable scene representation using RGB-D data.
+              Open-Fusion harnesses the power of a pre-trained vision-language foundation model (VLFM) for open-set semantic comprehension and employs the Truncated Signed Distance Function (TSDF) for swift 3D scene reconstruction.
+              By leveraging the VLFM, we extract region-based embeddings and their associated confidence maps.
+              These are then integrated with 3D knowledge from TSDF using an enhanced Hungarian-based feature-matching mechanism.
+              Notably, Open-Fusion delivers outstanding annotation-free 3D segmentation for open-vocabulary without necessitating additional 3D training.
+              Benchmark tests on the ScanNet dataset against leading zero-shot methods highlight Open-Fusion's superiority.
+              Furthermore, it seamlessly combines the strengths of region-based VLFM and TSDF, facilitating real-time 3D scene comprehension that includes object concepts and open-world semantics.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+    </div>
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@InProceedings{khoavo2024henasy,
+	author = {Khoa Vo and Thinh Phan and Kashu Yamazaki and Ngan Le},
+	title = {HENASY: Learning to Assemble Scene-Entities for Interpretable Egocentric Video-Language Model},
+	booktitle = {Thirty-eighth Conference on Neural Information Processing Systems},
+	year = {2024}
+}
+    }</code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+          <img alt="Creative Commons License" style="border-width:0"
+            src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website adapted from the Nerfies templates, which is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+                International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
