@@ -16,11 +16,11 @@ bundle exec jekyll serve
 
 ## Citation
 ```
-@article{kashu2023openfusion,
-    title={Open-Fusion: Real-time Open-Vocabulary 3D Mapping and Queryable Scene Representation},
-    author={Kashu Yamazaki, Taisei Hanyu, Khoa Vo, Thang Pham, Minh Tran, Gianfranco Doretto, Anh Nguyen, Ngan Le},
-    journal={arXiv preprint arXiv:2310.03923},
-    year={2023}
+@InProceedings{khoavo2024henasy,
+    author = {Khoa Vo and Thinh Phan and Kashu Yamazaki and Ngan Le},
+    title = {HENASY: Learning to Assemble Scene-Entities for Interpretable Egocentric Video-Language Model},
+    booktitle = {Thirty-eighth Conference on Neural Information Processing Systems},
+    year = {2024}
 }
 ```
 
