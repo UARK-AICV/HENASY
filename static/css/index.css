@@ -11,8 +11,8 @@ body {
 .link-block a {
     margin-top: 5px;
     margin-bottom: 5px;
-    border: 2px solid #1b4332; /* Define the border color */
-    color: #1b4332; /* Text color */
+    border: 2px solid #2d6a4f; /* Define the border color */
+    color: #2d6a4f; /* Text color */
     transition: all 0.1s linear; /* Transition effect to smooth changes */
 }
 
@@ -27,9 +27,9 @@ body {
 
 
 .link-block a:hover {
-    background-color: #1b4332; /* Change background color on hover */
+    background-color: #2d6a4f; /* Change background color on hover */
     color: #fff; /* Change text color on hover */
-    border-color: #1b4332; /* Ensure border matches */
+    border-color: #2d6a4f; /* Ensure border matches */
 }
 
 .coolname {
@@ -90,7 +90,7 @@ body {
 }
 
 .publication-authors a {
-   color: #1b4332 !important;
+   color: #2d6a4f !important;
 }
 
 .publication-authors a:hover {
